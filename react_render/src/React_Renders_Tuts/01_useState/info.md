@@ -33,7 +33,7 @@ export default UseState
 
 ![0203](../../Images/0203.JPG)
 
-3. Idle state => **First Log Cleared** ➡️ **Set 0(1st)** ➡️ **Set 0 1(2nd)**  
+3. Idle state => **First Log Cleared** ➡️ **Set 0(1st)** ➡️ **Set 0(2nd)**  
 ⬇️
 ![0204](../../Images/0204.JPG)
 here state did not changed because current value is 0 & button setting the same to 0. so there is no change current value. hence no re-rendering occured.
@@ -41,3 +41,7 @@ here state did not changed because current value is 0 & button setting the same 
 4. Idle state => First Log Cleared ➡️ increase 1(1st) ➡️ increase 1(2nd) ➡️ increase 1(3rd) ➡️ increase 1(4th) ➡️ increase 1(5th) ➡️ **Set 5(1st)** ➡️ **Set 5(2nd)**
 ![0205](../../Images/0205.JPG)
 here (**icrease 1** x 5 times) + (**set 5** x 1 time) = 6 times Re-rendered, but after that no-matter how many times you click on **set 5** it will not Re-render that component because the current value is already **5**.
+![0206](../../Images/0206.JPG)
+
+
+![0207](../../Images/0207.JPG)
