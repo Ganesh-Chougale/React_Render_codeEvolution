@@ -26,7 +26,6 @@ export default UseState
 1. Idle state => **First Log Cleared**
 
 ⬇️
-
 ![0201](../../Images/0201.JPG)
 2. Idle state => **First Log Cleared** => **increase 1(1st)** => **increase 1(2nd)**
 ⬇️
