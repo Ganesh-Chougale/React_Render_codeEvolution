@@ -44,9 +44,9 @@ export default ChildOne
 1. Idle state => **First Log Cleared**  
 ⬇️  
 ![0501](../../Images/0501.png)  
-1. Idle state => **First Log Cleared** ➡️ **Add One(X2)**   
+2. Idle state => **First Log Cleared** ➡️ **Add One(X2)**   
 ⬇️  
-![0502](../../Images/0502.png) 
+![0502](../../Images/0502.png)  
 here we can say **Child component** is not changing a single value from it, but still it being rendered along with **Parent Component**
 - To Optimize this we need to perform those things
 > 1. Remove Child component from parent
@@ -79,14 +79,14 @@ function ParentOne({children}) {
 // export default ParentOne
 ```
 
-1. Idle state => **First Log Cleared**  
+4. Idle state => **First Log Cleared**  
 ⬇️  
 ![0503](../../Images/0503.png)  
-1. Idle state => **First Log Cleared** ➡️ **Add One(X2)**   
+5. Idle state => **First Log Cleared** ➡️ **Add One(X2)**   
 ⬇️  
-![0504](../../Images/0504.png) 
+![0504](../../Images/0504.png)  
 now, here we can see that no unnecessary re-rendering occured.
 
-but here is a catch this is not suitable for nexted components, its React.memo which is more suitable for these kind of operation.
+but here is a catch this is not suitable for nested components, its React.memo which is more suitable for these kind of operation.
 
 
