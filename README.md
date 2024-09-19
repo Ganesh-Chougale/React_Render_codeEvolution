@@ -3,6 +3,6 @@
 
 ```bash
 git add .
-git commit -m "React Render Day One"
+git commit -m "React Render Day Two"
 git push origin main
 ```
