@@ -1,10 +1,10 @@
 import './App.css';
-import ParentOne from './React_Renders_Tuts/05_Unnencessary_Renders_Optimization/ParentOne';
+import ParentTwo from './React_Renders_Tuts/06_React_Memo/ParentTwo';
 
 function App() {
   return (
     <div className="App">
-    <ParentOne/>
+    <ParentTwo />
     </div>
   );
 }
