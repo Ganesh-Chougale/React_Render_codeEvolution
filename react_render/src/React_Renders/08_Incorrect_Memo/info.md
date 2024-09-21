@@ -153,3 +153,59 @@ export const MemorizedPF = React.memo(ChildFour);
 ![0805](../../Images/0805.png) 
 
 here the problem is, date & time is not changing after events.
+
+
+# 3. Passing Reference (entity initialized in Parent component) from parent to child
+
+## Parent
+```javascript
+import React, { useState } from 'react'
+import { MemoCFive } from './ChildFive';
+
+function ParentFive() {
+
+    const [count, setCount] = useState(0);
+    const [name, setName] = useState("Ganesh");
+
+    const person = {
+        fname: "Bruce",
+        lname: "Wayne"
+    }
+
+    console.log("Parent Rendered");
+  return (
+    <div>
+
+    <h3>Count: {count}</h3>
+    <button onClick={()=>setCount(c=>c+1)}>Add</button>
+
+    <MemoCFive person={person} />
+
+      
+    </div>
+  )
+}
+
+export default ParentFive
+```
+```javascript
+import React from 'react'
+
+function ChildFive({person}) {
+    console.log("Child Rendered");
+  return (
+    <div>
+      <h3>hello {person.fname} {person.lname}</h3>
+    </div>
+  )
+}
+
+export default ChildFive
+
+export const MemoCFive = React.memo(ChildFive)
+```
+1. Idle state => **First Log Cleared** ➡️ **Add (x3)**  
+⬇️  
+![0806](../../Images/0806.png) 
+here we can see the re-rendering happening
+Reason is we passed object from parent to child, when parent re-renders the object from parent get re-initialized thus reference get re-initialized causing child re-rendering.
