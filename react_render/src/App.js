@@ -1,10 +1,10 @@
 import './App.css';
-import ParentSix from './React_Renders_Tuts/09_Solved_Memo_Problems/ParentSix';
+import ParentRM from './React_Renders/10_Cause_Of_React_Render/Solution (ReactMemo)/ParentRM';
 
 function App() {
   return (
     <div className="App">
-    <ParentSix />
+    <ParentRM /> 
     </div>
   );
 }
